@@ -15,6 +15,7 @@ RUN set -eux; \
 COPY apache/site.conf /etc/apache2/sites-available/000-default.conf
 
 WORKDIR /app
+COPY schema.sql ./
 COPY bin ./bin
 COPY src ./src
 COPY public ./public

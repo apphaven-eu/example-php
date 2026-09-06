@@ -46,11 +46,5 @@ function db_from_env(): PDO
 
 function db_migrate(PDO $pdo): void
 {
-    $pdo->exec(
-        'CREATE TABLE IF NOT EXISTS todos ('
-        . ' id BIGSERIAL PRIMARY KEY,'
-        . ' title TEXT NOT NULL,'
-        . ' created_at TIMESTAMPTZ NOT NULL DEFAULT now()'
-        . ')'
-    );
+    $pdo->exec(file_get_contents(__DIR__ . '/../schema.sql'));
 }

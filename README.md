@@ -8,6 +8,8 @@ The repository includes the application, a `Dockerfile`, and an `apphaven.yaml` 
 ## Stack
 
 - PHP 8.4, a single `public/index.php` front controller, no framework
+- Markup inline in the front controller, escaped with `htmlspecialchars`; stylesheet served
+  from `public/style.css` and the schema read from `schema.sql`
 - PDO with the `pdo_pgsql` driver and prepared statements
 - PostgreSQL 17
 - Container base `php:8.4-apache`, with Apache serving `public/` on the port from `PORT`
