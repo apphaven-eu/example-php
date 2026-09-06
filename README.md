@@ -52,8 +52,8 @@ cd example-php
 5. Open http://localhost:8080/. The health endpoint is http://localhost:8080/healthz.
 
 Your local PHP needs the `pdo_pgsql` extension. Check with `php -m | grep pdo_pgsql`. In the
-container the entry point is `bin/serve.php`, which runs the same migration and then hands the
-process to Apache.
+container the entry point is `bin/start.sh`, which runs the same migration and then execs
+Apache.
 
 ## Deploy PHP on AppHaven
 
